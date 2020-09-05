@@ -1,0 +1,41 @@
+{:aliases
+ {;; pull in specific versions of Clojure:
+  :1.0 {:override-deps {org.clojure/clojure {:mvn/version "1.0.0"}}}
+  :1.1 {:override-deps {org.clojure/clojure {:mvn/version "1.1.0"}}}
+  :1.2 {:override-deps {org.clojure/clojure {:mvn/version "1.2.1"}}}
+  :1.3 {:override-deps {org.clojure/clojure {:mvn/version "1.3.0"}}}
+  :1.4 {:override-deps {org.clojure/clojure {:mvn/version "1.4.0"}}}
+  :1.5 {:override-deps {org.clojure/clojure {:mvn/version "1.5.1"}}}
+  :1.6 {:override-deps {org.clojure/clojure {:mvn/version "1.6.0"}}}
+  :1.7 {:override-deps {org.clojure/clojure {:mvn/version "1.7.0"}}}
+  :1.8 {:override-deps {org.clojure/clojure {:mvn/version "1.8.0"}}}
+  :1.9 {:override-deps {org.clojure/clojure {:mvn/version "1.9.0"}}}
+  :1.10 {:override-deps {org.clojure/clojure {:mvn/version "1.10.0"}}}
+  :1.10.1 {:override-deps {org.clojure/clojure {:mvn/version "1.10.1"}}}
+  :master {:override-deps {org.clojure/clojure {:mvn/version "1.11.0-master-SNAPSHOT"}}}
+
+  ;; project creation from templates:
+  ;; - see https://github.com/seancorfield/clj-new
+  ;; - create an application project:
+  ;;   - clj -A:new app myname/myapp
+  ;;   - cd myapp
+  ;;   - clj -m myname.myapp # run it!
+  ;;   - clj -A:test:runner # run the tests!
+  ;; - create a library project:
+  ;;   - clj -A:new lib myname/my-cool-lib
+  ;;   - cd my-cool-lib
+  ;;   - clj -A:test:runner # run the tests!
+  :new {:extra-deps {seancorfield/clj-new {:mvn/version "RELEASE"}}
+        :main-opts ["-m" "clj-new.create"]}
+
+  ;; uberjar building:
+  ;; - see https://github.com/seancorfield/depstar for a minimalist approach:
+  ;;   - clj -A:uberjar result.jar
+  ;; - to run it:
+  ;;   - java -cp result.jar clojure.main -m mymain.namespace
+  ;; - build a library JAR:
+  ;;   - clj -A:jar result-lib.jar
+  :uberjar {:extra-deps {seancorfield/depstar {:mvn/version "RELEASE"}}
+            :main-opts ["-m" "hf.depstar.uberjar"]}
+  :jar {:extra-deps {seancorfield/depstar {:mvn/version "RELEASE"}}
+        :main-opts ["-m" "hf.depstar.jar"]}}}
