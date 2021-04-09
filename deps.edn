@@ -53,4 +53,8 @@
 
   :rebl-jdk8   ;; for JDK 8
   {:extra-deps {com.cognitect/rebl {:mvn/version "0.9.242"}}
-   :main-opts ["-m" "cognitect.rebl"]}}}
+   :main-opts ["-m" "cognitect.rebl"]}
+
+  :klipse
+  {:extra-deps {viebel/klipse-repl {:mvn/version "0.2.3"}}
+   :main-opts ["-m" "klipse-repl.main"]}}}
