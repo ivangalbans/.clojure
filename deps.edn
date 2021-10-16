@@ -43,11 +43,15 @@
         :main-opts ["-m" "hf.depstar.jar"]}
 
   :nrepl {:extra-deps {nrepl/nrepl {:mvn/version "0.6.0"}}}
-    ;; - see https://github.com/cognitect-labs/REBL-distro
-    ;; - you need to download the REBL JAR (and update the local/root below)
-    ;; - you need to be using Clojure 1.10 and either
-    ;; - - Oracle JDK 8 -- use :rebl-8
-    ;; - - OpenJDK 11 -- use :rebl-11
+
+  :cider {:extra-deps {cider/cider-nrepl {:mvn/version "0.22.1"
+                                          refactor-nrepl {:mvn/version "2.4.0"}}}}
+
+  ;; - see https://github.com/cognitect-labs/REBL-distro
+  ;; - you need to download the REBL JAR (and update the local/root below)
+  ;; - you need to be using Clojure 1.10 and either
+  ;; - - Oracle JDK 8 -- use :rebl-8
+  ;; - - OpenJDK 11 -- use :rebl-11
   :rebl-8
   {:extra-deps {org.clojure/core.async {:mvn/version "0.4.490"}
                     ;; deps for file datafication (0.9.149 or later)
@@ -71,9 +75,6 @@
                 org.openjfx/javafx-base     {:mvn/version "11.0.1"}
                 org.openjfx/javafx-web      {:mvn/version "11.0.1"}}
    :main-opts ["-m" "cognitect.rebl"]}
-
-  :cider {:extra-deps {cider/cider-nrepl {:mvn/version "0.22.1"
-                                          refactor-nrepl {:mvn/version "2.4.0"}}}}
 
   :klipse
   {:extra-deps {viebel/klipse-repl {:mvn/version "0.2.3"}}
