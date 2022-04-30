@@ -14,7 +14,7 @@
   :1.9    {:override-deps {org.clojure/clojure {:mvn/version "1.9.0"}}}
   :1.10   {:override-deps {org.clojure/clojure {:mvn/version "1.10.0"}}}
   :1.10.1 {:override-deps {org.clojure/clojure {:mvn/version "1.10.1"}}}
-  :master {:override-deps {org.clojure/clojure {:mvn/version "1.11.0-alpha2"}}}
+  :master {:override-deps {org.clojure/clojure {:mvn/version "1.11.1"}}}
 
   ;; project creation from templates:
   ;; - see https://github.com/seancorfield/clj-new
@@ -39,6 +39,7 @@
   ;;   - clj -A:jar result-lib.jar
   :uberjar {:extra-deps {seancorfield/depstar {:mvn/version "RELEASE"}}
             :main-opts ["-m" "hf.depstar.uberjar"]}
+
   :jar {:extra-deps {seancorfield/depstar {:mvn/version "RELEASE"}}
         :main-opts ["-m" "hf.depstar.jar"]}
 

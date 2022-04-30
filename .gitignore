@@ -3,3 +3,4 @@
 .java-version
 .rebel_readline_history
 .lsp/
+.clj-kondo/.cache
